@@ -1,0 +1,46 @@
+# ============================================================
+# Real-Time Voice Translator – Python Dependencies
+# ============================================================
+# Install with:   pip install -r requirements.txt
+# ============================================================
+
+# ── Core / Audio ──────────────────────────────────────────
+sounddevice>=0.4.6          # Cross-platform audio I/O
+soundfile>=0.12.1           # Audio file read/write (WAV, MP3, OGG …)
+numpy>=1.24.0               # Numerical arrays for audio processing
+
+# ── Voice Activity Detection ───────────────────────────────
+# webrtcvad-wheels is a pre-built wheel version that avoids
+# the C compiler dependency of the original webrtcvad.
+webrtcvad-wheels>=2.0.10    # VAD (optional but strongly recommended)
+
+# ── Speech Recognition (choose one) ───────────────────────
+# Option A: faster-whisper (recommended – GPU/CPU, auto language detection)
+faster-whisper>=1.0.0
+
+# Option B: Vosk (uncomment if you prefer a smaller footprint)
+# vosk>=0.3.45
+
+# ── Translation (choose one) ──────────────────────────────
+# Option A: Argos Translate (fully offline, auto-downloads language packs)
+argostranslate>=1.9.1
+
+# Option B: MarianMT / HuggingFace Transformers
+# Uncomment if you prefer HuggingFace models:
+# transformers>=4.40.0
+# sentencepiece>=0.2.0
+# sacremoses>=0.1.1
+# torch>=2.0.0              # or: pip install torch --index-url https://download.pytorch.org/whl/cu118
+
+# ── Text-to-Speech (choose one) ───────────────────────────
+# Option A: pyttsx3 (system TTS – no download, zero config)
+pyttsx3>=2.90
+
+# Option B: Coqui TTS (neural, high quality)
+# Uncomment to install Coqui TTS:
+# TTS>=0.22.0
+
+# ── GPU acceleration (optional) ───────────────────────────
+# If you have an NVIDIA GPU, install the matching CUDA torch build:
+# pip install torch --index-url https://download.pytorch.org/whl/cu118
+# CTranslate2 (used by faster-whisper) will auto-detect CUDA.
