@@ -1,19 +1,8 @@
-# Virtual environment
 venv/
-
-# Python cache
 __pycache__/
 *.pyc
-
-# Audio files
 *.wav
 *.mp3
-
-# Logs
 *.log
-
-# Environment variables
 .env
-
-# Mac system files
 .DS_Store
